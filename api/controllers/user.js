@@ -53,3 +53,13 @@ export const deleteUser = (req, res) => {
     return res.status(200).json("Usuário deletado com sucesso.");
   });
 };
+
+export const getUsersByCpf = (req, res) => {
+  const q = "SELECT * FROM tabusuario WHERE TabUsuarioCpf = ?";
+
+  db.query(q, req.params.TabUsuarioCpf, (err, data) => {
+    if (err) return res.json(err);
+
+    return res.status(200).json(data);
+  });
+};

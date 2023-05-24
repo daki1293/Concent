@@ -82,7 +82,7 @@ const Grid = ({ users, setUsers, setOnEdit }) => {
               <FaEdit onClick={() => handleEdit(item)} />
             </Td>
             <Td alignCenter width="5%">
-              <FaTrash onClick={() => handleDelete(item.idTabUsuario)} />
+            <FaTrash onClick={() => window.confirm('Deseja excluir?') && handleDelete(item.idTabUsuario)} />
             </Td>
           </Tr>
         ))}
