@@ -1,9 +1,9 @@
 import express from "express";
-import { addOrder, deleteOrder, getOrder, updateOrder, getOrdersByIdUser } from "../controllers/orders.js";
+import { addOrder, deleteOrder, getOrders, updateOrder, getOrdersByIdUser } from "../controllers/orders.js";
 
 const router = express.Router()
 
-router.get("/orders", getOrder)
+router.get("/orders", getOrders)
 
 router.get("/orders/orderbyiduser/:idTabUsuario", getOrdersByIdUser)
 

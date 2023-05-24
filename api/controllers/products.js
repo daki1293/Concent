@@ -1,6 +1,6 @@
 import { db } from "../db.js";
 
-export const getProduts = (_, res) => {
+export const getProducts = (_, res) => {
     const q = "SELECT * FROM tabprodutos;";
 
     db.query(q, (err, data) => {
